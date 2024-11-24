@@ -24,16 +24,20 @@ body{
     margin: 0;
     padding: 0;
 }
+
+/* scroll bar */
 body::-webkit-scrollbar{
     width: .75rem;
 }
 body::-webkit-scrollbar-track{
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
 }
 body::-webkit-scrollbar-thumb{
-    background-color: var(--accent-color);
+    background-color: var(--text-primary);
 }
 
+
+/* main and nav container */
 main{
     margin-left: 5rem;
     padding: 1rem;
@@ -45,8 +49,12 @@ main{
     top: 0px;
     left: 0px;
     background-color: var(--bg-primary);
+
+    transition: 200ms ease-out;
 }
 
+
+/* navbar items */
 .navbar-nav{
     list-style: none;
     padding: 0;
@@ -67,4 +75,28 @@ main{
 .nav-link{
     display: flex;
     align-items: center;
+    height: 5rem;
+    color: var(--text-primary)
+}
+.link-text{
+    display:none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.nav-link i{
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0 1.5rem;
+
+    transition: none;
+}
+
+/* navbar animation */
+.navbar:hover{
+    width: 14rem;
+}
+.navbar:hover .link-text{
+    display: block;
 }
